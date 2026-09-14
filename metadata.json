@@ -1,0 +1,6 @@
+{
+  "name": "SPOTIBAI",
+  "description": "SPOTIBAI is a modern, high-fidelity music streaming and audio distribution platform with playback, uploading, playlists, search, and library management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

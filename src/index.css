@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #101114;
+    --bg-sidebar: #151619;
+    --bg-surface: #18191d;
+    --bg-elevated: #1f2025;
+    --border-subtle: #26272d;
+    --border-strong: #33353d;
+    --text-main: #f4f4f5;
+    --text-muted: #9ba1a6;
+    --text-dim: #60646c;
+    --accent-apple: #4ea824;
+    --accent-apple-hover: #5bbd2d;
+    --accent-apple-active: #41901e;
+    --accent-apple-subtle: rgba(78, 168, 36, 0.14);
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow: hidden;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Studio audio app scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2c33;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3d46;
+}
+
+/* Custom range input slider styled for audio scrubbers */
+input[type="range"] {
+  accent-color: #4ea824;
+}
+
+/* Crisp audio waveform animation for playing track */
+@keyframes eq-bounce-1 {
+  0%, 100% { height: 4px; }
+  50% { height: 14px; }
+}
+
+@keyframes eq-bounce-2 {
+  0%, 100% { height: 12px; }
+  50% { height: 5px; }
+}
+
+@keyframes eq-bounce-3 {
+  0%, 100% { height: 6px; }
+  50% { height: 16px; }
+}
+
+.playing-eq-1 {
+  animation: eq-bounce-1 0.75s ease-in-out infinite;
+}
+.playing-eq-2 {
+  animation: eq-bounce-2 0.6s ease-in-out infinite;
+}
+.playing-eq-3 {
+  animation: eq-bounce-3 0.85s ease-in-out infinite;
+}
